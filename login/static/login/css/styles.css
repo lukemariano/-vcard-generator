@@ -1,0 +1,38 @@
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #151515;
+}
+
+.content{
+    width: 450px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #700aff94;
+    border-radius: 30px;
+}
+
+.title{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text-color-white{
+    color: white;
+}
+
+.font-title{
+    font-weight: 600;
+}
+
+.subtitle{
+    font-weight: 400;
+}
+

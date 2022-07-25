@@ -14,14 +14,15 @@ body {
     width: 450px;
     height: 350px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     border: 2px solid #700aff94;
     border-radius: 30px;
+    color: white;
 }
 
 .title{
     text-align: center;
-    margin-top: 10px;
 }
 
 .text-color-white{
@@ -36,3 +37,27 @@ body {
     font-weight: 400;
 }
 
+.description{
+    text-align: center;
+    margin-top: 35px;
+}
+
+.buttons{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 45px;
+}
+
+button.btn-design {
+    border: none;
+    width: 150px;
+    height: 38px;
+    background-color: #700aff94;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}

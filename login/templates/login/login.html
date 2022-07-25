@@ -1,0 +1,15 @@
+{% extends 'login/layout.html' %}
+
+{% block content %}
+<h1>SIGN IN</h1>
+{% if message  %}
+    <h3>{{ message }}</h3>
+{% endif %}
+<form action="{% url 'login.login_auth' %}" method="post">
+    {% csrf_token %} 
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <input type="submit" value="Login">
+</form>
+
+{% endblock  %}

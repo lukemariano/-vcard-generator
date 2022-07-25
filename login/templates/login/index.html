@@ -1,5 +1,4 @@
 {% extends 'login/layout.html' %}
-{% load static %}
 
 {% block content %}
 
@@ -13,7 +12,7 @@
             <span>Login or register to generate your VCard</span>
         </div>
         <div class="buttons">
-            <button class="btn-design">SIGN IN</button>
+            <a href="{% url 'login.login_view' %}"><button class="btn-design">SIGN IN</button></a>
             <button class="btn-design">SIGN UP</button>
         </div>
     </div>

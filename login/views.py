@@ -1,6 +1,9 @@
 # from django.http import HttpResponse
+from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
+
+from .forms import UserRegistrationForm
 
 # Create your views here.
 
@@ -30,6 +33,26 @@ def login_auth(request):
 def logout_view(request):
     logout(request)
     return redirect('login.index')
+
+
+def register_view(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+            messages.success(
+                request, f'Your account has been created. You can log in now!')
+            return redirect('login.login_view')
+    else:
+        form = UserRegistrationForm()
+
+    context = {'form': form}
+    return render(request, 'login/register.html', context)
+
+
+def register_auth(request):
+    pass
 
 
 def vcard(request):

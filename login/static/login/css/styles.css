@@ -61,3 +61,36 @@ button.btn-design {
     cursor: pointer;
     font-weight: 600;
 }
+
+.forms{
+    text-align: center;
+}
+
+.forms > form > div > p > input{
+    width: 60%;
+    border-radius: 5px;
+}
+
+.margin-top-btn{
+    margin-top: 6px;
+}
+
+.display-flex > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.forms > form > input{
+    width: 60%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.color-red{
+    color: red;
+}
+
+

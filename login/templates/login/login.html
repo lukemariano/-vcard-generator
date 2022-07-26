@@ -1,15 +1,22 @@
 {% extends 'login/layout.html' %}
-
 {% block content %}
-<h1>SIGN IN</h1>
-{% if message  %}
-    <h3>{{ message }}</h3>
-{% endif %}
-<form action="{% url 'login.login_auth' %}" method="post">
-    {% csrf_token %} 
-    <input type="text" name="username">
-    <input type="password" name="password">
-    <input type="submit" value="Login">
-</form>
-
+<div class="container">
+    <div class="content">
+        <div class="title">
+            <h1 class="text-color-white font-title">SIGN IN</h1>
+            {% if message  %}
+            <h3 class="color-red">{{ message }}</h3>
+            {% endif %}
+        </div>
+        <div class="forms display-flex">
+            <form action="{% url 'login.login_auth' %}" method="post">
+                {% csrf_token %} 
+                <input type="text" name="username" placeholder='Username'>
+                <input type="password" name="password" placeholder='Password'>
+                <button class="btn-design margin-top-btn" type="submit">Login</button>
+            </form>
+            <a href="{% url 'login.index' %}">Go Home</a>
+        </div>
+    </div>
+</div>
 {% endblock  %}

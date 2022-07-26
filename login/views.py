@@ -23,7 +23,7 @@ def login_auth(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('login.vcard')
+            return redirect('generatecard.vindex')
         else:
             return render(request, 'login/login.html', {
                 'message': "Invalid Credentials",
@@ -49,7 +49,3 @@ def register_view(request):
 
     context = {'form': form}
     return render(request, 'login/register.html', context)
-
-
-def vcard(request):
-    return render(request, 'login/vcard.html')

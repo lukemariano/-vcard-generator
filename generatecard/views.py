@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 
 def vcard_index(request):
-    pass
+    return render(request, 'generatecard/vcard.html')
 
 
 def vcard_form(request):

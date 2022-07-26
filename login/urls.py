@@ -9,5 +9,4 @@ urlpatterns = [
     path('loggin/vcard', views.vcard, name='login.vcard'),
     path('logout/', views.logout_view, name='login.logout_view'),
     path('register/', views.register_view, name="login.register_view"),
-    path('register_auth/', views.register_auth, name='login.register_auth'),
 ]

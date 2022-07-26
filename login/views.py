@@ -51,9 +51,5 @@ def register_view(request):
     return render(request, 'login/register.html', context)
 
 
-def register_auth(request):
-    pass
-
-
 def vcard(request):
     return render(request, 'login/vcard.html')
